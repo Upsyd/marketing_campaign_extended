@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+        <record model="ir.ui.view" id="view_marketing_campaign_activity_form_extended">
+            <field name="name">marketing.campaign.activity.form.extended</field>
+            <field name="model">marketing.campaign.activity</field>
+            <field name="inherit_id" ref="marketing_campaign.view_marketing_campaign_activity_form" />
+            <field name="arch" type="xml">
+                <xpath expr="/form/group/group/field[@name='type']" position="after">
+                    <field name="expect_email_accounts" attrs="{'invisible': [('type', '!=', 'email')]}" placeholder="Ex- @members.ebay.com,@marketplace.amazon.com"/>
+                </xpath>
+            </field>
+        </record>
+	</data>
+</openerp>
+        
